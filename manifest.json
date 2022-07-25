@@ -1,0 +1,19 @@
+{
+  "required_api_version": "^2.0.0",
+  "name": "Better Google",
+  "description": "A Better Google Extension for ulauncher!",
+  "developer_name": "JoniHoffi",
+  "icon": "images/icon.png",
+  "options": {
+    "query_debounce": 0.5
+  },
+  "preferences": [
+    {
+      "id": "kw",
+      "type": "keyword",
+      "name": "Keyword",
+      "description": "The keyword to search for",
+      "default_value": "bg"
+    }
+  ]
+}
