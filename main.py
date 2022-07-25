@@ -23,12 +23,9 @@ class KeywordQueryEventListener(EventListener):
         query = "Geeksforgeeks"
 
         for j in search(query, tld="co.in", num=10, stop=10, pause=2):
-            print(j)
-
-        for i in range(5):
             items.append(ExtensionResultItem(icon='images/icon.png',
-                                             name='Item %s' % i,
-                                             description='Item description %s' % i,
+                                             name=j,
+                                             description=j,
                                              on_enter=HideWindowAction()))
 
         return RenderResultListAction(items)
