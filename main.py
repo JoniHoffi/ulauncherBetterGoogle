@@ -22,7 +22,7 @@ class KeywordQueryEventListener(EventListener):
 
         query = event.get_argument()
 
-        for url in search(query, tld="co.in", num=10, stop=10, pause=1):
+        for url in search(query, tld="co.in", num=1, stop=1, pause=1):
             items.append(ExtensionResultItem(icon='images/icon.png',
                                              name=url,
                                              description=url,
