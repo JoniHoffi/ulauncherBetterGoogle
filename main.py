@@ -22,10 +22,10 @@ class KeywordQueryEventListener(EventListener):
 
         query = event.get_argument()
 
-        for j in search(query, tld="co.in", num=10, stop=10, pause=2):
+        for url in search(query, tld="co.in", num=10, stop=10, pause=1):
             items.append(ExtensionResultItem(icon='images/icon.png',
-                                             name=j,
-                                             description=j,
+                                             name=url,
+                                             description=url,
                                              on_enter=HideWindowAction()))
 
         return RenderResultListAction(items)
