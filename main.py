@@ -20,7 +20,7 @@ class KeywordQueryEventListener(EventListener):
     def on_event(self, event, extension):
         items = []
 
-        query = "Geeksforgeeks"
+        query = event.get_argument()
 
         for j in search(query, tld="co.in", num=10, stop=10, pause=2):
             items.append(ExtensionResultItem(icon='images/icon.png',
