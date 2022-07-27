@@ -1,4 +1,5 @@
 from googlesearch import search
+import time
 
 from ulauncher.api.client.Extension import Extension
 from ulauncher.api.client.EventListener import EventListener
@@ -19,6 +20,8 @@ class KeywordQueryEventListener(EventListener):
 
     def on_event(self, event, extension):
         items = []
+
+        time.sleep(5)
 
         result = search(event.get_argument(), num=1, stop=5, start=0, lang="de")
 
