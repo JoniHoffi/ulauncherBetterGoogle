@@ -5,7 +5,7 @@ from ulauncher.api.client.EventListener import EventListener
 from ulauncher.api.shared.event import KeywordQueryEvent, ItemEnterEvent
 from ulauncher.api.shared.item.ExtensionResultItem import ExtensionResultItem
 from ulauncher.api.shared.action.RenderResultListAction import RenderResultListAction
-from ulauncher.api.shared.action.HideWindowAction import HideWindowAction
+from ulauncher.api.shared.action.OpenUrlAction import OpenUrlAction
 
 
 class DemoExtension(Extension):
@@ -27,7 +27,7 @@ class KeywordQueryEventListener(EventListener):
             items.append(ExtensionResultItem(icon='images/icon.png',
                                              name=url,
                                              description=url,
-                                             on_enter=HideWindowAction()))
+                                             on_enter=OpenUrlAction(url)))
 
         return RenderResultListAction(items)
 
