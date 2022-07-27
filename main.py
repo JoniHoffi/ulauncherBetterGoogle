@@ -29,6 +29,7 @@ class KeywordQueryEventListener(EventListener):
                                              description=url,
                                              on_enter=OpenUrlAction(url)))
 
+        print(items)
         return RenderResultListAction(items)
 
 if __name__ == '__main__':
