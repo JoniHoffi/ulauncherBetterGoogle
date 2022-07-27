@@ -20,7 +20,7 @@ class KeywordQueryEventListener(EventListener):
     def on_event(self, event, extension):
         items = []
 
-        result = search(event.get_data(), num=1, stop=5, start=0, lang="de")
+        result = search(event.get_argument(), num=1, stop=5, start=0, lang="de")
 
         for url in result:
             print(url)
